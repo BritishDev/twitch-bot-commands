@@ -5,6 +5,7 @@ const commands = [
   { name: "!birthday", usage: "!birthday", aliases: [], category: "Fun", description: "Counts down to Sweatgod's birthday on July 17th, rolling into next year when needed.", availability: "Sweatgod only" },
   { name: "!bob", usage: "!bob", aliases: [], category: "Lore", description: "Explains the story behind Sweatgod's bob750 joke account.", availability: "Sweatgod only" },
   { name: "!coinflip", usage: "!coinflip", aliases: [], category: "Fun", description: "Flips a fair coin and returns Heads or Tails.", availability: "Sweatgod only" },
+  { name: "!end", usage: "!end", aliases: ["!eventend"], category: "General", description: "Shows the live countdown until the PVPHQ Event closes at 5 PM EST on July 12th.", availability: "Sweatgod only · Temporary", expiresAt: "2026-07-12T22:00:00Z" },
   { name: "!lurk", usage: "!lurk", aliases: [], category: "General", description: "Lets chat know you are stepping away and welcomes you back." },
   { name: "!clip", usage: "!clip <duration> [title]", aliases: ["-clip"], category: "Tools", description: "Creates a Twitch clip using a duration from 5 to 90 seconds." },
   { name: "!vanish", usage: "!vanish", aliases: ["-vanish"], category: "Fun", description: "Briefly vanishes you from chat with a one-second timeout.", availability: "Selected channels" },
@@ -38,7 +39,8 @@ const empty = document.querySelector("#empty-state");
 const summary = document.querySelector("#result-summary");
 let activeCategory = "All";
 
-document.querySelector("#command-count").textContent = commands.length;
+const activeCommands = () => commands.filter((command) => !command.expiresAt || Date.now() < Date.parse(command.expiresAt));
+document.querySelector("#command-count").textContent = activeCommands().length;
 
 for (const category of ["All", ...new Set(commands.map((command) => command.category))]) {
   const button = document.createElement("button");
@@ -109,7 +111,7 @@ function commandCard(command) {
 
 function render() {
   const query = search.value.trim().toLowerCase();
-  const visible = commands.filter((command) => {
+  const visible = activeCommands().filter((command) => {
     const categoryMatches = activeCategory === "All" || command.category === activeCategory;
     const text = [command.name, command.usage, command.description, command.category, command.availability, ...command.aliases].join(" ").toLowerCase();
     return categoryMatches && text.includes(query);
@@ -122,6 +124,14 @@ function render() {
   document.querySelector("#moderator-section").hidden = moderatorCommands.length === 0;
   empty.hidden = visible.length !== 0;
   summary.textContent = `${visible.length} ${visible.length === 1 ? "command" : "commands"} shown`;
+}
+
+const nextExpiry = Math.min(...commands.filter((command) => command.expiresAt).map((command) => Date.parse(command.expiresAt)));
+if (Number.isFinite(nextExpiry) && nextExpiry > Date.now()) {
+  setTimeout(() => {
+    document.querySelector("#command-count").textContent = activeCommands().length;
+    render();
+  }, nextExpiry - Date.now() + 1_000);
 }
 
 search.addEventListener("input", render);
