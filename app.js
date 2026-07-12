@@ -14,9 +14,18 @@ const commands = [
   { name: "!nextuhc", usage: "!nextuhc", aliases: ["-nextuhc"], category: "UHC", description: "Shows the next scheduled Stray UHC match.", availability: "Stray-enabled channels" },
   { name: "!scenarios", usage: "!scenarios", aliases: ["!nextuhcscenarios", "-scenarios", "-nextuhcscenarios"], category: "UHC", description: "Shows the scenarios for the next scheduled Stray UHC.", availability: "Stray-enabled channels" },
   { name: "!teamsize", usage: "!teamsize", aliases: ["-teamsize"], category: "UHC", description: "Shows the team size for the next scheduled Stray UHC.", availability: "Stray-enabled channels" },
+  { name: "!a timeout", usage: "!a timeout <user> <seconds>", aliases: [], category: "Moderation", audience: "Moderator", description: "Times out a Twitch user for the specified number of seconds.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a untimeout", usage: "!a untimeout <user>", aliases: [], category: "Moderation", audience: "Moderator", description: "Removes an active timeout or ban from a Twitch user.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a ban", usage: "!a ban <user> [reason]", aliases: [], category: "Moderation", audience: "Moderator", description: "Bans a Twitch user with an optional moderation reason.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a unban", usage: "!a unban <user>", aliases: [], category: "Moderation", audience: "Moderator", description: "Removes an active ban or timeout from a Twitch user.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a sr", usage: "!a sr <song URL>", aliases: [], category: "Queue", audience: "Moderator", description: "Adds a supported YouTube, Spotify, SoundCloud, Twitch, or clip URL to the song queue.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a skip", usage: "!a skip", aliases: [], category: "Queue", audience: "Moderator", description: "Skips the current song through the configured queue bot.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a pin", usage: "Reply to a message, then type !a pin", aliases: [], category: "Chat", audience: "Moderator", description: "Pins the replied-to message, or the most recent eligible message.", availability: "Authorized mods · Sweatgod" },
+  { name: "!a cmd", usage: "!a cmd <message>", aliases: [], category: "Chat", audience: "Moderator", description: "Makes the bot send a plain chat message.", availability: "Authorized mods · Sweatgod" },
 ];
 
 const grid = document.querySelector("#command-grid");
+const moderatorGrid = document.querySelector("#moderator-grid");
 const search = document.querySelector("#search");
 const filters = document.querySelector("#filters");
 const empty = document.querySelector("#empty-state");
@@ -99,7 +108,12 @@ function render() {
     const text = [command.name, command.usage, command.description, command.category, command.availability, ...command.aliases].join(" ").toLowerCase();
     return categoryMatches && text.includes(query);
   });
-  grid.replaceChildren(...visible.map(commandCard));
+  const viewerCommands = visible.filter((command) => command.audience !== "Moderator");
+  const moderatorCommands = visible.filter((command) => command.audience === "Moderator");
+  grid.replaceChildren(...viewerCommands.map(commandCard));
+  moderatorGrid.replaceChildren(...moderatorCommands.map(commandCard));
+  document.querySelector("#viewer-section").hidden = viewerCommands.length === 0;
+  document.querySelector("#moderator-section").hidden = moderatorCommands.length === 0;
   empty.hidden = visible.length !== 0;
   summary.textContent = `${visible.length} ${visible.length === 1 ? "command" : "commands"} shown`;
 }

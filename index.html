@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17121f">
-  <meta name="description" content="Public Twitch chat commands and usage for the Sweatgod bot.">
+  <meta name="description" content="Viewer and moderator Twitch chat commands for the Sweatgod bot.">
   <meta property="og:title" content="Sweatgod Bot Commands">
-  <meta property="og:description" content="Search public Twitch commands, aliases, and usage examples.">
+  <meta property="og:description" content="Search viewer and moderator Twitch commands, aliases, and usage examples.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://britishdev.github.io/twitch-bot-commands/">
   <link rel="stylesheet" href="styles.css">
@@ -17,9 +17,10 @@
   <div class="glow glow-two" aria-hidden="true"></div>
   <header class="hero">
     <p class="eyebrow"><span></span> TWITCH CHAT GUIDE</p>
-    <h1>Find the right<br><em>command.</em></h1>
-    <p class="intro">Public viewer commands, aliases, and examples for the Sweatgod Twitch bot.</p>
-    <div class="summary"><strong id="command-count">0</strong><span>public commands</span></div>
+    <h1><em>Commands.</em></h1>
+    <p class="intro">Viewer and moderator commands, aliases, and examples for the Sweatgod Twitch bot.</p>
+    <p class="byline">Built by <strong>British</strong></p>
+    <div class="summary"><strong id="command-count">0</strong><span>documented commands</span></div>
   </header>
 
   <main>
@@ -34,7 +35,20 @@
     </section>
 
     <p id="result-summary" class="result-summary" aria-live="polite"></p>
-    <section id="command-grid" class="command-grid" aria-label="Public Twitch commands"></section>
+    <section id="viewer-section" class="catalogue-section">
+      <div class="section-heading">
+        <p>01</p>
+        <div><h2>Viewer commands</h2><span>Available to everyone unless marked otherwise.</span></div>
+      </div>
+      <div id="command-grid" class="command-grid" aria-label="Public Twitch commands"></div>
+    </section>
+    <section id="moderator-section" class="catalogue-section moderator-section">
+      <div class="section-heading">
+        <p>02</p>
+        <div><h2>Moderator commands</h2><span>Restricted to authorized moderators in Sweatgod's channel.</span></div>
+      </div>
+      <div id="moderator-grid" class="command-grid" aria-label="Moderator Twitch commands"></div>
+    </section>
     <div id="empty-state" class="empty" hidden>
       <strong>No matching commands</strong>
       <span>Try a different name, alias, or category.</span>
@@ -42,8 +56,8 @@
   </main>
 
   <footer>
-    <span>Public viewer commands only</span>
-    <span class="footer-mark">SG<span>•</span>BOT</span>
+    <span>Viewer + moderator command guide</span>
+    <span class="footer-mark">BY BRITISH <span>•</span> SG BOT</span>
   </footer>
   <script src="app.js"></script>
 </body>
