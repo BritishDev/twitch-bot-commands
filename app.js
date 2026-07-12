@@ -1,10 +1,10 @@
 const commands = [
   { name: "!commands", usage: "!commands", aliases: [], category: "General", description: "Opens this public command guide." },
-  { name: "!animatium", usage: "!animatium [user]", aliases: [], category: "Links", description: "Links the targeted viewer to the Animatium mod page." },
-  { name: "!binds", usage: "!binds", aliases: [], category: "General", description: "Shows Sweatgod's current keybinds." },
-  { name: "!birthday", usage: "!birthday", aliases: [], category: "Fun", description: "Counts down to Sweatgod's birthday on July 17th, rolling into next year when needed." },
-  { name: "!bob", usage: "!bob", aliases: [], category: "Lore", description: "Explains the story behind Sweatgod's bob750 joke account." },
-  { name: "!coinflip", usage: "!coinflip", aliases: [], category: "Fun", description: "Flips a fair coin and returns Heads or Tails." },
+  { name: "!animatium", usage: "!animatium [user]", aliases: [], category: "Links", description: "Links the targeted viewer to the Animatium mod page.", availability: "Sweatgod only" },
+  { name: "!binds", usage: "!binds", aliases: [], category: "General", description: "Shows Sweatgod's current keybinds.", availability: "Sweatgod only" },
+  { name: "!birthday", usage: "!birthday", aliases: [], category: "Fun", description: "Counts down to Sweatgod's birthday on July 17th, rolling into next year when needed.", availability: "Sweatgod only" },
+  { name: "!bob", usage: "!bob", aliases: [], category: "Lore", description: "Explains the story behind Sweatgod's bob750 joke account.", availability: "Sweatgod only" },
+  { name: "!coinflip", usage: "!coinflip", aliases: [], category: "Fun", description: "Flips a fair coin and returns Heads or Tails.", availability: "Sweatgod only" },
   { name: "!lurk", usage: "!lurk", aliases: [], category: "General", description: "Lets chat know you are stepping away and welcomes you back." },
   { name: "!clip", usage: "!clip <duration> [title]", aliases: ["-clip"], category: "Tools", description: "Creates a Twitch clip using a duration from 5 to 90 seconds." },
   { name: "!vanish", usage: "!vanish", aliases: ["-vanish"], category: "Fun", description: "Briefly vanishes you from chat with a one-second timeout.", availability: "Selected channels" },
@@ -27,7 +27,7 @@ const commands = [
   { name: "!a skip", usage: "!a skip", aliases: [], category: "Queue", audience: "Moderator", description: "Skips the current song through the configured queue bot.", availability: "Authorized mods · Sweatgod" },
   { name: "!a pin", usage: "Reply to a message, then type !a pin", aliases: [], category: "Chat", audience: "Moderator", description: "Pins the replied-to message, or the most recent eligible message.", availability: "Authorized mods · Sweatgod" },
   { name: "!a cmd", usage: "!a cmd <message>", aliases: [], category: "Chat", audience: "Moderator", description: "Makes the bot send a plain chat message.", availability: "Authorized mods · Sweatgod" },
-  { name: "!editcom", usage: "!editcom <command> <response>", aliases: [], category: "Commands", audience: "Moderator", description: "Updates !animatium, !binds, !bob, or !teamsize for the current channel. Supports $(touser), $(user), and $(channel).", availability: "Broadcaster or moderator" },
+  { name: "!editcom", usage: "!editcom <command> <response>", aliases: [], category: "Commands", audience: "Moderator", description: "Updates !animatium, !binds, !bob, or !teamsize. Supports $(touser), $(user), and $(channel).", availability: "Sweatgod mods only" },
 ];
 
 const grid = document.querySelector("#command-grid");
