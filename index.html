@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17121f">
+  <meta name="description" content="Public Twitch chat commands and usage for the Sweatgod bot.">
+  <meta property="og:title" content="Sweatgod Bot Commands">
+  <meta property="og:description" content="Search public Twitch commands, aliases, and usage examples.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://britishdev.github.io/twitch-bot-commands/">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sweatgod Bot Commands</title>
+</head>
+<body>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+  <header class="hero">
+    <p class="eyebrow"><span></span> TWITCH CHAT GUIDE</p>
+    <h1>Find the right<br><em>command.</em></h1>
+    <p class="intro">Public viewer commands, aliases, and examples for the Sweatgod Twitch bot.</p>
+    <div class="summary"><strong id="command-count">0</strong><span>public commands</span></div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Command filters">
+      <label class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <span class="sr-only">Search commands</span>
+        <input id="search" type="search" placeholder="Search commands, aliases, or features…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div id="filters" class="filters" aria-label="Filter by category"></div>
+    </section>
+
+    <p id="result-summary" class="result-summary" aria-live="polite"></p>
+    <section id="command-grid" class="command-grid" aria-label="Public Twitch commands"></section>
+    <div id="empty-state" class="empty" hidden>
+      <strong>No matching commands</strong>
+      <span>Try a different name, alias, or category.</span>
+    </div>
+  </main>
+
+  <footer>
+    <span>Public viewer commands only</span>
+    <span class="footer-mark">SG<span>•</span>BOT</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
