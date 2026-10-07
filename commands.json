@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T18:43:20.544Z",
+  "generatedAt": "2026-10-07T23:36:55.272Z",
   "commands": [
     {
       "name": "!commands",
@@ -530,6 +530,21 @@
       ]
     },
     {
+      "name": "!pack",
+      "usage": "!pack",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!tp",
+        "!texturepack",
+        "!mcpack",
+        "!pac",
+        "!tps"
+      ]
+    },
+    {
       "name": "!pin",
       "usage": "!pin",
       "category": "Custom",
@@ -567,6 +582,18 @@
       "audience": "Viewer",
       "availability": "#rain_dynasty · #sweatgod",
       "aliases": []
+    },
+    {
+      "name": "!settings",
+      "usage": "!settings",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!setting",
+        "!settin"
+      ]
     },
     {
       "name": "!team",
