@@ -18,3 +18,15 @@ GitHub Pages build. Failed refreshes preserve the previous copy.
 
 Local validation: `node --test test/guide-data.test.cjs`.
 Manual refresh: `node scripts/refresh-commands.cjs`.
+
+The redesigned guide uses compact expandable rows, category navigation, access
+and channel filters, and a persistent light/dark theme. `/` focuses search.
+Copy buttons copy full syntax; if clipboard access is denied the syntax is
+selected for keyboard copying. Live refreshes preserve filters and open rows.
+
+Design references, tokens, component states and review guidance are in
+[`DESIGN.md`](DESIGN.md). A local [`component showcase`](design/showcase.html)
+covers expanded rows, long syntax, copy success, saved data and empty states.
+Serve locally with `python -m http.server 8769 --bind 127.0.0.1`.
+The live endpoint permits the GitHub Pages origin; a local preview will use the
+saved fallback unless the browser's test harness supplies the live response.

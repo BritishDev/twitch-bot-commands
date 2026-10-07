@@ -3,64 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17121f">
-  <meta name="description" content="Viewer and moderator Twitch chat commands for the twitch bot.">
-  <meta property="og:title" content="Sweatgod Bot Commands">
-  <meta property="og:description" content="Search viewer and moderator Twitch commands, aliases, and usage examples.">
+  <meta name="theme-color" content="#faf9f6">
+  <meta name="description" content="Find Sweatgod bot commands, copy their syntax, and check aliases, permissions, and channel availability. Updated automatically from the running bot.">
+  <meta property="og:title" content="Sweatgod · Commands">
+  <meta property="og:description" content="A live reference for viewer and moderator Twitch chat commands.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://britishdev.github.io/twitch-bot-commands/">
   <link rel="canonical" href="https://britishdev.github.io/twitch-bot-commands/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
-  <title>Sweatgod Bot Commands</title>
+  <title>Sweatgod · Commands</title>
 </head>
 <body>
-  <div class="glow glow-one" aria-hidden="true"></div>
-  <div class="glow glow-two" aria-hidden="true"></div>
-  <header class="hero">
-    <p class="eyebrow"><span></span> TWITCH CHAT GUIDE</p>
-    <h1><em>Commands.</em></h1>
-    <p class="intro">Viewer and moderator commands, aliases, and examples for the twitch bot.</p>
-    <p class="byline">Built by <strong>British</strong></p>
-    <p id="sync-status" class="byline" role="status">Loading the current command guide…</p>
-    <div class="summary"><strong id="command-count">0</strong><span>documented commands</span></div>
-  </header>
-
-  <main>
-    <section class="controls" aria-label="Command filters">
-      <label class="search-wrap">
-        <span class="search-icon" aria-hidden="true">⌕</span>
-        <span class="sr-only">Search commands</span>
-        <input id="search" type="search" placeholder="Search commands, aliases, or features…" autocomplete="off">
-        <kbd>/</kbd>
-      </label>
-      <div id="filters" class="filters" aria-label="Filter by category"></div>
-    </section>
-
-    <p id="result-summary" class="result-summary" aria-live="polite"></p>
-    <section id="viewer-section" class="catalogue-section">
-      <div class="section-heading">
-        <p>01</p>
-        <div><h2>Viewer commands</h2><span>Available to everyone unless marked otherwise.</span></div>
-      </div>
-      <div id="command-grid" class="command-grid" aria-label="Public Twitch commands"></div>
-    </section>
-    <section id="moderator-section" class="catalogue-section moderator-section">
-      <div class="section-heading">
-        <p>02</p>
-        <div><h2>Moderator commands</h2><span>Permissions and channel restrictions are shown on each command.</span></div>
-      </div>
-      <div id="moderator-grid" class="command-grid" aria-label="Moderator Twitch commands"></div>
-    </section>
-    <div id="empty-state" class="empty" hidden>
-      <strong>No matching commands</strong>
-      <span>Try a different name, alias, or category.</span>
-    </div>
-  </main>
-
-  <footer>
-    <span>Viewer + moderator command guide</span>
-    <span class="footer-mark">BY BRITISH <span>•</span> SG BOT</span>
-  </footer>
-  <script src="guide-data.js"></script>
-  <script src="app.js"></script>
+  <a class="skip-link" href="#main">Skip to commands</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="./" aria-label="Sweatgod commands home"><span class="brand-mark" aria-hidden="true">/</span>Sweatgod <span class="brand-divider">/</span><span class="brand-page">Commands</span></a>
+    <div class="header-actions"><span id="sync-status" class="sync-status" role="status">Connecting…</span><button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" title="Switch theme"></button></div>
+  </div></header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Categories"><p class="sidebar-label">Browse</p><div id="filters" class="category-list"></div><div class="sidebar-note"><span class="note-mark" aria-hidden="true">↳</span><p>Select a command for syntax, aliases, and permissions.</p></div></aside>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><h1>Commands <span id="command-count" class="total-count">—</span></h1><p>Viewer and moderator Twitch chat commands.</p></div>
+      <section class="controls" aria-label="Command filters">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <label class="sr-only" for="search">Search commands</label><input id="search" type="search" placeholder="Search commands or aliases…" autocomplete="off" spellcheck="false"><kbd aria-hidden="true">/</kbd><button id="clear-search" class="icon-button clear-search" type="button" aria-label="Clear search" hidden>×</button>
+        </div>
+        <div class="filter-toolbar">
+          <fieldset class="audience-filter"><legend class="sr-only">Command access</legend><label><input type="radio" name="audience" value="All" checked><span>All</span></label><label><input type="radio" name="audience" value="Viewer"><span>Viewer</span></label><label><input type="radio" name="audience" value="Moderator"><span>Moderator</span></label></fieldset>
+          <div class="selects"><label class="mobile-category"><span class="sr-only">Category</span><select id="category-select"><option value="All">All categories</option></select></label><label><span class="sr-only">Channel</span><select id="channel-select"><option value="All">All channels</option></select></label></div>
+        </div>
+      </section>
+      <div class="results-heading"><p id="result-summary" role="status">Loading commands…</p><span class="column-hint" aria-hidden="true">Command / Description</span></div>
+      <p id="feed-notice" class="feed-notice" hidden><span></span><button id="retry" class="text-button" type="button">Retry</button></p>
+      <div id="loading" class="loading" aria-hidden="true"><span></span><span></span><span></span></div>
+      <section id="viewer-section" class="catalogue-section" hidden><h2>Viewer commands <span id="viewer-count"></span></h2><div id="command-grid" class="command-list"></div></section>
+      <section id="moderator-section" class="catalogue-section" hidden><h2>Moderator commands <span id="moderator-count"></span></h2><div id="moderator-grid" class="command-list"></div></section>
+      <div id="empty-state" class="empty" hidden><h2>No matching commands</h2><p>Try a different search or reset your filters.</p><button id="reset-filters" class="button" type="button">Reset filters</button></div>
+      <footer><span>Built by <a href="https://github.com/BritishDev">British</a></span><a href="https://github.com/BritishDev/twitch-bot-commands">View source <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </div>
+  <p id="copy-status" class="sr-only" role="status"></p>
+  <script src="guide-data.js"></script><script src="app.js"></script>
 </body>
 </html>
