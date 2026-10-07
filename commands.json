@@ -1,0 +1,788 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-07T18:43:20.544Z",
+  "commands": [
+    {
+      "name": "!commands",
+      "usage": "!commands",
+      "category": "Help",
+      "description": "Show the public command guide.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!redeemrank",
+      "usage": "!redeemrank <Discord user ID>",
+      "category": "Sweatgod",
+      "description": "Sweatgod only: redeem Discord Rank with channel points, join the Discord, then use !redeemrank <Discord user ID>. One successful claim per Twitch and Discord account; failed claims can retry without paying again.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!editcom",
+      "usage": "!editcom <command> <response>",
+      "category": "Moderation",
+      "description": "Update a configurable Twitch command response from chat.",
+      "audience": "Moderator",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!animatium",
+      "usage": "!animatium",
+      "category": "Sweatgod",
+      "description": "Share the Animatium mod link.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!binds",
+      "usage": "!binds",
+      "category": "Sweatgod",
+      "description": "Show Sweatgod's current keybind summary.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!bob",
+      "usage": "!bob",
+      "category": "Sweatgod",
+      "description": "Explain the bob750 community reference.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!birthday",
+      "usage": "!birthday",
+      "category": "Sweatgod",
+      "description": "Show the countdown to Sweatgod's birthday.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!coinflip",
+      "usage": "!coinflip",
+      "category": "Fun",
+      "description": "Flip a virtual coin. Moderator flips temporarily enable emote-only, count down 5 to 1, announce the result, then restore chat. Existing emote-only mode stays enabled. With broadcaster authorization, a running prediction with Heads and Tails outcomes is locked before the reveal and resolved to the result.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!countdown",
+      "usage": "!countdown",
+      "category": "Fun",
+      "description": "Check remaining minutes and seconds. Mods/head mods/broadcaster: !countdown 30m, !countdown reset [duration], !countdown stop. Supports d/h/m/s up to 7 days; reminders every five minutes remaining, at one minute, and at completion.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!runcoinflip",
+      "usage": "!runcoinflip",
+      "category": "Fun",
+      "description": "Mods/head mods/broadcaster: start Coinflip (GAMBA TIME), Heads vs Tails, for two minutes. Then automatically count down, announce the flip, settle the prediction, and announce Thanks for playing! Requires broadcaster prediction authorization; existing predictions are preserved.",
+      "audience": "Moderator",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "-straynotis",
+      "usage": "-straynotis",
+      "category": "Moderation",
+      "description": "Toggle automated Stray event notifications.",
+      "audience": "Moderator",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!nextuhc",
+      "usage": "!nextuhc",
+      "category": "Stray",
+      "description": "Show the next announced UHC time.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty",
+      "aliases": [
+        "-nextuhc"
+      ]
+    },
+    {
+      "name": "!scenarios",
+      "usage": "!scenarios",
+      "category": "Stray",
+      "description": "Show scenarios for the next announced UHC.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty",
+      "aliases": [
+        "-scenarios"
+      ]
+    },
+    {
+      "name": "!nextuhcscenarios",
+      "usage": "!nextuhcscenarios",
+      "category": "Stray",
+      "description": "Show scenarios for the next announced UHC.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty",
+      "aliases": [
+        "-nextuhcscenarios"
+      ]
+    },
+    {
+      "name": "!teamsize",
+      "usage": "!teamsize",
+      "category": "Stray",
+      "description": "Show the next announced UHC team size or its editable override.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty",
+      "aliases": [
+        "-teamsize"
+      ]
+    },
+    {
+      "name": "!nh",
+      "usage": "!nh <IGN> [count]",
+      "category": "Minecraft",
+      "description": "Look up a Minecraft account's known name history.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": [
+        "-nh",
+        "-namehistory",
+        "!namehistory"
+      ]
+    },
+    {
+      "name": "!fwstats",
+      "usage": "!fwstats <IGN>",
+      "category": "Stats",
+      "description": "Look up extended Funniewars statistics.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty",
+      "aliases": [
+        "-fwstats"
+      ]
+    },
+    {
+      "name": "!straystats",
+      "usage": "!straystats <IGN>",
+      "category": "Stats",
+      "description": "Look up Stray statistics.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": [
+        "-straystats"
+      ]
+    },
+    {
+      "name": "!riftstats",
+      "usage": "!riftstats <IGN>",
+      "category": "Stats",
+      "description": "Look up Rift statistics.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": [
+        "-riftstats",
+        "-riftstasts",
+        "!riftstasts"
+      ]
+    },
+    {
+      "name": "!mcsrelo",
+      "usage": "!mcsrelo [IGN]",
+      "category": "Stats",
+      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #sweatgod",
+      "aliases": [
+        "-mcsrelo",
+        "!mcsrstats",
+        "!elo",
+        "-elo"
+      ]
+    },
+    {
+      "name": "+mcsrelo",
+      "usage": "+mcsrelo [IGN]",
+      "category": "Stats",
+      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
+      "aliases": [
+        "+mcsrstats",
+        "+elo",
+        "+ranked",
+        "+mcsr"
+      ]
+    },
+    {
+      "name": "+race",
+      "usage": "+race",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+lb",
+      "usage": "+lb",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+leaderboard",
+      "usage": "+leaderboard",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+rankedleaderboard",
+      "usage": "+rankedleaderboard",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+rankedlb",
+      "usage": "+rankedlb",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+lastmatch",
+      "usage": "+lastmatch",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+rankedmatch",
+      "usage": "+rankedmatch",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+record",
+      "usage": "+record",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+matchrecord",
+      "usage": "+matchrecord",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+winrate",
+      "usage": "+winrate",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+wl",
+      "usage": "+wl",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+average",
+      "usage": "+average",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+avg",
+      "usage": "+avg",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "+today",
+      "usage": "+today",
+      "category": "Stats",
+      "description": "Show MCSR race, leaderboard, match, record, win-rate, average, and 24-hour stats in Themewdew.",
+      "audience": "Viewer",
+      "availability": "#themewdew",
+      "aliases": []
+    },
+    {
+      "name": "!pb",
+      "usage": "!pb",
+      "category": "Stats",
+      "description": "Show a Minecraft speedrunning personal best.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!mctiers",
+      "usage": "!mctiers <IGN>",
+      "category": "Stats",
+      "description": "Look up Minecraft tier rankings.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": [
+        "-mctiers",
+        "-tiers",
+        "!tiers"
+      ]
+    },
+    {
+      "name": "!subtiers",
+      "usage": "!subtiers <IGN>",
+      "category": "Stats",
+      "description": "Look up Minecraft subtier rankings.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": [
+        "-subtiers"
+      ]
+    },
+    {
+      "name": "-vanish",
+      "usage": "-vanish",
+      "category": "Chat",
+      "description": "Temporarily vanish from supported chat channels.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!vanish",
+      "usage": "!vanish",
+      "category": "Chat",
+      "description": "Temporarily vanish from supported chat channels.",
+      "audience": "Viewer",
+      "availability": "#pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "-clip",
+      "usage": "-clip [channel] [seconds] [title]",
+      "category": "Stream",
+      "description": "Create a clip for the current stream or another Twitch channel.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!clip",
+      "usage": "!clip [channel] [seconds] [title]",
+      "category": "Stream",
+      "description": "Create a clip for the current stream or another Twitch channel.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #greninja · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!lurk",
+      "usage": "!lurk",
+      "category": "Chat",
+      "description": "Post a compact lurk acknowledgement.",
+      "audience": "Viewer",
+      "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!age",
+      "usage": "!age",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!closedquals",
+      "usage": "!closedquals",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!cq"
+      ]
+    },
+    {
+      "name": "!discord",
+      "usage": "!discord",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!disc",
+        "!discor",
+        "!disco"
+      ]
+    },
+    {
+      "name": "!event",
+      "usage": "!event",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!ip",
+      "usage": "!ip",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!keybinds",
+      "usage": "!keybinds",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!kits",
+      "usage": "!kits",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!champkits"
+      ]
+    },
+    {
+      "name": "!mainevent",
+      "usage": "!mainevent",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!main"
+      ]
+    },
+    {
+      "name": "!moneywhen",
+      "usage": "!moneywhen",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!moneys7"
+      ]
+    },
+    {
+      "name": "!openquals",
+      "usage": "!openquals",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!oq"
+      ]
+    },
+    {
+      "name": "!pin",
+      "usage": "!pin",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!profile",
+      "usage": "!profile",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!pvpchamps",
+      "usage": "!pvpchamps",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!champs",
+        "!pvpc"
+      ]
+    },
+    {
+      "name": "!recap",
+      "usage": "!recap",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!team",
+      "usage": "!team",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!recap1",
+      "usage": "!recap1",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap2",
+      "usage": "!recap2",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap3",
+      "usage": "!recap3",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap4",
+      "usage": "!recap4",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap5",
+      "usage": "!recap5",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap6",
+      "usage": "!recap6",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap7",
+      "usage": "!recap7",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap8",
+      "usage": "!recap8",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap9",
+      "usage": "!recap9",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap10",
+      "usage": "!recap10",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap11",
+      "usage": "!recap11",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap12",
+      "usage": "!recap12",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap13",
+      "usage": "!recap13",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap14",
+      "usage": "!recap14",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!recap15",
+      "usage": "!recap15",
+      "category": "Recaps",
+      "description": "Post a saved stream recap.",
+      "audience": "Viewer",
+      "availability": "#rain_dynasty",
+      "aliases": []
+    },
+    {
+      "name": "!a timeout",
+      "usage": "!a timeout <user> <seconds>",
+      "category": "Moderation",
+      "description": "Time out a Twitch user.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a untimeout",
+      "usage": "!a untimeout <user>",
+      "category": "Moderation",
+      "description": "Remove an active timeout or ban.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a ban",
+      "usage": "!a ban <user> [reason]",
+      "category": "Moderation",
+      "description": "Ban a Twitch user with an optional reason.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a unban",
+      "usage": "!a unban <user>",
+      "category": "Moderation",
+      "description": "Remove an active ban or timeout.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a sr",
+      "usage": "!a sr <song URL>",
+      "category": "Queue",
+      "description": "Add a supported song link to the queue.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a skip",
+      "usage": "!a skip",
+      "category": "Queue",
+      "description": "Skip the current song through the configured queue bot.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a pin",
+      "usage": "!a pin",
+      "category": "Chat",
+      "description": "Pin the replied-to message, or the most recent eligible message.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!a cmd",
+      "usage": "!a cmd <message>",
+      "category": "Chat",
+      "description": "Send a plain chat message through the bot.",
+      "audience": "Moderator",
+      "availability": "Configured administrator only · #sweatgod",
+      "aliases": []
+    }
+  ]
+}

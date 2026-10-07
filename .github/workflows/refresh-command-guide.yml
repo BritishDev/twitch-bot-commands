@@ -1,0 +1,50 @@
+name: Refresh command guide
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - guide-data.js
+      - scripts/refresh-commands.cjs
+      - .github/workflows/refresh-command-guide.yml
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-command-guide
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate the feed reader
+        run: node --test test/guide-data.test.cjs
+      - name: Refresh the saved copy from the live bot
+        run: node scripts/refresh-commands.cjs
+      - name: Commit changes and rebuild Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! git diff --quiet -- commands.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add commands.json
+            git commit -m 'Refresh saved command guide from live bot'
+            git push origin HEAD:main
+          fi
+          # GITHUB_TOKEN pushes do not trigger the legacy Pages build themselves.
+          # Also request a build after a no-op refresh to recover a prior build failure.
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
