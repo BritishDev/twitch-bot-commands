@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T23:36:55.272Z",
+  "generatedAt": "2026-10-08T06:11:04.176Z",
   "commands": [
     {
       "name": "!commands",
@@ -12,13 +12,27 @@
       "aliases": []
     },
     {
-      "name": "!redeemrank",
-      "usage": "!redeemrank <Discord user ID>",
-      "category": "Sweatgod",
-      "description": "Sweatgod only: redeem Discord Rank with channel points, join the Discord, then use !redeemrank <Discord user ID>. One successful claim per Twitch and Discord account; failed claims can retry without paying again.",
+      "name": "!champslb",
+      "usage": "!champslb",
+      "category": "Stats",
+      "description": "Show the live PvP Championship top 10 positions, names and Elo in Sweatgod's channel.",
       "audience": "Viewer",
       "availability": "#sweatgod",
-      "aliases": []
+      "aliases": [
+        "!champlb",
+        "!champsleaderboard"
+      ]
+    },
+    {
+      "name": "!redeem",
+      "usage": "!redeem <Discord username>",
+      "category": "Sweatgod",
+      "description": "Sweatgod only: redeem Discord Rank with channel points, join the Discord, then use !redeem <Discord username>. Use your exact account username, not a display name or nickname. One successful claim per Twitch and Discord account; failed claims can retry without paying again.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!redeemrank"
+      ]
     },
     {
       "name": "!editcom",
@@ -195,9 +209,9 @@
     },
     {
       "name": "!mcsrelo",
-      "usage": "!mcsrelo [IGN]",
+      "usage": "!mcsrelo (Sweatgod); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo shows PvP Championship position, Elo and last-check age. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod",
       "aliases": [
@@ -209,9 +223,9 @@
     },
     {
       "name": "+mcsrelo",
-      "usage": "+mcsrelo [IGN]",
+      "usage": "+mcsrelo (Sweatgod); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo shows PvP Championship position, Elo and last-check age. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
       "aliases": [
