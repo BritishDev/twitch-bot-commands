@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T06:11:04.176Z",
+  "generatedAt": "2026-10-08T19:58:47.160Z",
   "commands": [
     {
       "name": "!commands",
@@ -209,9 +209,9 @@
     },
     {
       "name": "!mcsrelo",
-      "usage": "!mcsrelo (Sweatgod); !mcsrelo <IGN>",
+      "usage": "!mcsrelo [player] (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo shows PvP Championship position, Elo and last-check age. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo [player] shows PvP Championship position, Elo, wins, losses and qualification status; defaults to sweatgod. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod",
       "aliases": [
@@ -223,9 +223,9 @@
     },
     {
       "name": "+mcsrelo",
-      "usage": "+mcsrelo (Sweatgod); !mcsrelo <IGN>",
+      "usage": "+mcsrelo [player] (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo shows PvP Championship position, Elo and last-check age. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo [player] shows PvP Championship position, Elo, wins, losses and qualification status; defaults to sweatgod. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
       "aliases": [
