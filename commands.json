@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T19:58:47.160Z",
+  "generatedAt": "2026-10-09T00:25:10.210Z",
   "commands": [
     {
       "name": "!commands",
@@ -209,9 +209,9 @@
     },
     {
       "name": "!mcsrelo",
-      "usage": "!mcsrelo [player] (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "!mcsrelo (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo [player] shows PvP Championship position, Elo, wins, losses and qualification status; defaults to sweatgod. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo shows only Sweatgod's PvP Championship position, Elo, wins, losses and qualification status. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod",
       "aliases": [
@@ -223,9 +223,9 @@
     },
     {
       "name": "+mcsrelo",
-      "usage": "+mcsrelo [player] (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "+mcsrelo (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo [player] shows PvP Championship position, Elo, wins, losses and qualification status; defaults to sweatgod. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo shows only Sweatgod's PvP Championship position, Elo, wins, losses and qualification status. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
       "aliases": [
@@ -596,6 +596,17 @@
       "audience": "Viewer",
       "availability": "#rain_dynasty · #sweatgod",
       "aliases": []
+    },
+    {
+      "name": "!rift",
+      "usage": "!rift",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!therift"
+      ]
     },
     {
       "name": "!settings",
