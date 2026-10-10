@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T00:25:10.210Z",
+  "generatedAt": "2026-10-10T22:36:39.228Z",
   "commands": [
     {
       "name": "!commands",
@@ -623,6 +623,15 @@
     {
       "name": "!team",
       "usage": "!team",
+      "category": "Custom",
+      "description": "Custom Twitch command.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
+      "name": "!teams",
+      "usage": "!teams",
       "category": "Custom",
       "description": "Custom Twitch command.",
       "audience": "Viewer",
