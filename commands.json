@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T22:36:39.228Z",
+  "generatedAt": "2026-10-11T15:45:35.365Z",
   "commands": [
     {
       "name": "!commands",
@@ -21,6 +21,18 @@
       "aliases": [
         "!champlb",
         "!champsleaderboard"
+      ]
+    },
+    {
+      "name": "!elopause",
+      "usage": "!elopause",
+      "category": "Moderation",
+      "description": "Mods or broadcaster in Sweatgod's channel: !elopause pauses named-player Elo lookups, !eloresume enables them, and !elostatus shows the setting. Bare !elo and !elo Sweatgod keep working. The pause survives bot restarts.",
+      "audience": "Moderator",
+      "availability": "#sweatgod",
+      "aliases": [
+        "!eloresume",
+        "!elostatus"
       ]
     },
     {
@@ -209,9 +221,9 @@
     },
     {
       "name": "!mcsrelo",
-      "usage": "!mcsrelo (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "!mcsrelo [IGN] (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo shows only Sweatgod's PvP Championship position, Elo, wins, losses and qualification status. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo [IGN] shows PvP Championship position, Elo, wins, losses and qualification status for the named player, or Sweatgod when no name is given. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod",
       "aliases": [
@@ -223,9 +235,9 @@
     },
     {
       "name": "+mcsrelo",
-      "usage": "+mcsrelo (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "+mcsrelo [IGN] (Sweatgod channel); !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo shows only Sweatgod's PvP Championship position, Elo, wins, losses and qualification status. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "In Sweatgod's channel, !elo [IGN] shows PvP Championship position, Elo, wins, losses and qualification status for the named player, or Sweatgod when no name is given. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
       "aliases": [
