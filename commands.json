@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T15:45:35.365Z",
+  "generatedAt": "2026-10-14T01:15:40.832Z",
   "commands": [
     {
       "name": "!commands",
@@ -10,30 +10,6 @@
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #rain_dynasty · #sweatgod",
       "aliases": []
-    },
-    {
-      "name": "!champslb",
-      "usage": "!champslb",
-      "category": "Stats",
-      "description": "Show the live PvP Championship top 10 positions, names and Elo in Sweatgod's channel.",
-      "audience": "Viewer",
-      "availability": "#sweatgod",
-      "aliases": [
-        "!champlb",
-        "!champsleaderboard"
-      ]
-    },
-    {
-      "name": "!elopause",
-      "usage": "!elopause",
-      "category": "Moderation",
-      "description": "Mods or broadcaster in Sweatgod's channel: !elopause pauses named-player Elo lookups, !eloresume enables them, and !elostatus shows the setting. Bare !elo and !elo Sweatgod keep working. The pause survives bot restarts.",
-      "audience": "Moderator",
-      "availability": "#sweatgod",
-      "aliases": [
-        "!eloresume",
-        "!elostatus"
-      ]
     },
     {
       "name": "!redeem",
@@ -185,6 +161,15 @@
       ]
     },
     {
+      "name": "!ytsubs",
+      "usage": "!ytsubs",
+      "category": "Stats",
+      "description": "Show Sweatgod's YouTube subscriber count, refreshed every minute.",
+      "audience": "Viewer",
+      "availability": "#sweatgod",
+      "aliases": []
+    },
+    {
       "name": "!fwstats",
       "usage": "!fwstats <IGN>",
       "category": "Stats",
@@ -221,9 +206,9 @@
     },
     {
       "name": "!mcsrelo",
-      "usage": "!mcsrelo [IGN] (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "!mcsrelo <IGN>; !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo [IGN] shows PvP Championship position, Elo, wins, losses and qualification status for the named player, or Sweatgod when no name is given. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod",
       "aliases": [
@@ -235,9 +220,9 @@
     },
     {
       "name": "+mcsrelo",
-      "usage": "+mcsrelo [IGN] (Sweatgod channel); !mcsrelo <IGN>",
+      "usage": "+mcsrelo <IGN>; !mcsrelo <IGN>",
       "category": "Stats",
-      "description": "In Sweatgod's channel, !elo [IGN] shows PvP Championship position, Elo, wins, losses and qualification status for the named player, or Sweatgod when no name is given. Use !mcsrelo for Minecraft speedrunning ranked Elo and profile statistics.",
+      "description": "Look up Minecraft speedrunning ranked Elo and profile statistics.",
       "audience": "Viewer",
       "availability": "#brltishh · #pxbv · #sweatgod · #themewdew",
       "aliases": [
@@ -587,18 +572,6 @@
       "audience": "Viewer",
       "availability": "#sweatgod",
       "aliases": []
-    },
-    {
-      "name": "!pvpchamps",
-      "usage": "!pvpchamps",
-      "category": "Custom",
-      "description": "Custom Twitch command.",
-      "audience": "Viewer",
-      "availability": "#sweatgod",
-      "aliases": [
-        "!champs",
-        "!pvpc"
-      ]
     },
     {
       "name": "!recap",
